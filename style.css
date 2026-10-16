@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #090979, #8000ff, #ff00cc);
+    color: white;
+}
+
+.card {
+    width: 90%;
+    max-width: 600px;
+    padding: 35px 25px;
+    text-align: center;
+    border: 2px solid #ffffff66;
+    border-radius: 25px;
+    background: #ffffff20;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px #ffffff44;
+    animation: kirish 1.5s ease;
+    z-index: 2;
+}
+
+@keyframes kirish {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cake {
+    font-size: 75px;
+    animation: sakrash 1s infinite;
+}
+
+@keyframes sakrash {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+h1 {
+    margin: 20px 0;
+    color: #ffe66d;
+    text-shadow: 0 0 15px orange;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ffe66d;
+    color: #600080;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: white;
+    box-shadow: 0 0 20px white;
+}
+
+#message {
+    display: none;
+    margin-top: 25px;
+    color: #ffe66d;
+    font-size: 20px;
+    font-weight: bold;
+    animation: kirish 1s ease;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.balloon {
+    position: fixed;
+    bottom: -100px;
+    font-size: 40px;
+    animation: uchish 7s linear forwards;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes uchish {
+    to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    width: 10px;
+    height: 15px;
+    animation: tushish 4s linear forwards;
+    z-index: 5;
+    pointer-events: none;
+}
+
+@keyframes tushish {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 25px 18px;
+    }
+}
